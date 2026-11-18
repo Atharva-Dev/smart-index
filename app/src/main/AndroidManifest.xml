@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Smart Index manifest (LLD — App shell §4.1). Privacy invariants (FR-016, NFR-006, ADR-009):
+  - no network permission in any variant: INTERNET and ACCESS_NETWORK_STATE are removed even if a library
+    merges them, and `./gradlew check` (verifyNoNetworkPermissions) fails on any network permission;
+  - backups and device transfer are off (allowBackup=false + data_extraction_rules excluding every domain);
+  - only the launcher activity is exported (verifyManifestHardening).
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Network: removed, never requested (FR-016). -->
+    <uses-permission android:name="android.permission.INTERNET" tools:node="remove" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" tools:node="remove" />
+
+    <!-- Group PHOTOS_VIDEOS (onboarding step 1). VISUAL_USER_SELECTED = Android 14+ partial access. -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VISUAL_USER_SELECTED" />
+    <!-- Group FILES (step 2): documents, other files, Samsung call recordings. Sideloaded APK only (HLD §1). -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <!-- Group MESSAGES (step 3), CALL_LOG (step 4), CONTACTS (step 5). Read-only; nothing is ever sent. -->
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- WorkManager (LLD — Indexing orchestration §6.5): no foreground service, so its permission is removed. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" tools:node="remove" />
+
+    <!-- Telephony is not required to install: tablets without SIM still index files and media. -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <!-- Package visibility for the outgoing intents of HLD §6.5 (resolve checks before launching). -->
+    <queries>
+        <!-- Open: ACTION_VIEW on a content URI of any type; Open with… uses the chooser over the same intent. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:mimeType="*/*" />
+        </intent>
+        <!-- Message row: the conversation (content://mms-sms/conversations/<thread>) or the sms: fallback. -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data
+                android:host="mms-sms"
+                android:scheme="content" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="sms" />
+        </intent>
+        <!-- Call back: ACTION_DIAL tel: (no CALL_PHONE permission). -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+            <data android:scheme="tel" />
+        </intent>
+        <!-- Open contact (lookup URI) and Add to contacts (insert/edit). -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data
+                android:host="com.android.contacts"
+                android:scheme="content" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.INSERT_OR_EDIT" />
+            <data android:mimeType="vnd.android.cursor.item/contact" />
+        </intent>
+        <!-- Onboarding step 2: the All files access page for this app. -->
+        <intent>
+            <action android:name="android.settings.MANAGE_APP_ALL_FILES_ACCESS_PERMISSION" />
+            <data android:scheme="package" />
+        </intent>
+    </queries>
+
+    <application
+        android:name=".SmartIndexApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:hasFragileUserData="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartIndex"
+        tools:targetApi="36">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--
+          FileProvider for documents and other files (ADR-012): non-exported, grant-only. Exact content from
+          LLD — Media & file indexer §6.4 (SIDX-8); the URIs are built by SIDX-59, tested by SIDX-60.
+        -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.files"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- PerfMarkers (LLD — Test & benchmark harness §3.2): a no-op unless BuildConfig.PERF_MARKERS. -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="com.kuriousdragon.smartindex.perf.PerfMarkersInitializer"
+                android:value="androidx.startup" />
+            <!-- On-demand WorkManager init with the Hilt WorkerFactory (SmartIndexApp is a Configuration.Provider). -->
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+        <!-- No diagnostics receiver and no foreground service (LLD — Indexing orchestration §6.3, §6.5). -->
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            tools:node="remove" />
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            tools:node="remove" />
+    </application>
+</manifest>

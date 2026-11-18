@@ -1,0 +1,41 @@
+# Synthetic Samsung call-recording names (fictional). '-' = null; pattern_id '-' => expect null.
+# 256-char and empty names are tested in code (TSV cannot hold them).
+file_name	pattern_id	name	number	local_datetime	is_copy
+Call recording Rahul_241103_094215.m4a	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	no
+Call recording +91 98765 43210_241103_101005.m4a	who_yyMMdd_HHmmss	-	+91 98765 43210	2024-11-03T10:10:05	no
+Rahul_9876543210_241103_094215.m4a	who_number_yyMMdd_HHmmss	Rahul	9876543210	2024-11-03T09:42:15	no
+Call recording Rahul (+91 98765 43210)_241103_094215.m4a	who_yyMMdd_HHmmss	Rahul	+91 98765 43210	2024-11-03T09:42:15	no
+Call recording Rahul_241103_094215 (1).m4a	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	yes
+Call recording Private number_241103_101005.m4a	who_yyMMdd_HHmmss	-	-	2024-11-03T10:10:05	no
+9876543210_241103_101005.amr	who_yyMMdd_HHmmss	-	9876543210	2024-11-03T10:10:05	no
+Rahul_241303_094215.m4a	-	-	-	-	no
+Voice 001.m4a	-	-	-	-	no
+Call recording Rahul Sharma_241103_094215.m4a	who_yyMMdd_HHmmss	Rahul Sharma	-	2024-11-03T09:42:15	no
+Call recording 9876543210_241103_101005.m4a	who_yyMMdd_HHmmss	-	9876543210	2024-11-03T10:10:05	no
+Call recording Rahul_+919876543210_241103_094215.m4a	who_number_yyMMdd_HHmmss	Rahul	+919876543210	2024-11-03T09:42:15	no
+Call recording Rahul_20241103_094215.m4a	who_yyyyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	no
+Call recording Unknown_241103_101005.m4a	who_yyMMdd_HHmmss	-	-	2024-11-03T10:10:05	no
+Call recording Conference call_241103_101005.m4a	who_yyMMdd_HHmmss	-	-	2024-11-03T10:10:05	no
+Call recording _241103_101005.m4a	who_yyMMdd_HHmmss	-	-	2024-11-03T10:10:05	no
+Anrufaufnahme Rahul_241103_094215.m4a	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	no
+Appel Rahul_241103_094215.m4a	who_yyMMdd_HHmmss	Appel Rahul	-	2024-11-03T09:42:15	no
+कॉल रिकॉर्डिंग राहुल_241103_094215.m4a	who_yyMMdd_HHmmss	राहुल	-	2024-11-03T09:42:15	no
+Anrufaufnahme +49 151 2345678_241103_094215.m4a	who_yyMMdd_HHmmss	-	+49 151 2345678	2024-11-03T09:42:15	no
+Call recording A_B_241103_094215.m4a	who_yyMMdd_HHmmss	A_B	-	2024-11-03T09:42:15	no
+Call recording Flat 12_241103_094215.m4a	who_yyMMdd_HHmmss	Flat 12	-	2024-11-03T09:42:15	no
+Call recording 121_241103_094215.m4a	who_yyMMdd_HHmmss	-	121	2024-11-03T09:42:15	no
+Call recording Rahul_241103_094215.amr	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	no
+Call recording Rahul_241103_094215.3gp	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	no
+Call recording Rahul_241103_094215.AAC	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	no
+Call recording Rahul_241103_094215.M4A	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T09:42:15	no
+Rahul_241103_235959.m4a	who_yyMMdd_HHmmss	Rahul	-	2024-11-03T23:59:59	no
+Rahul_240229_120000.m4a	who_yyMMdd_HHmmss	Rahul	-	2024-02-29T12:00:00	no
+Rahul_241132_094215.m4a	-	-	-	-	no
+Rahul_241103_240000.m4a	-	-	-	-	no
+Rahul_241103_096015.m4a	-	-	-	-	no
+Rahul_230229_120000.m4a	-	-	-	-	no
+Rahul_24110_094215.m4a	-	-	-	-	no
+Rahul-241103-094215.m4a	-	-	-	-	no
+Rahul_241103_094215.txt	-	-	-	-	no
+Rahul_241103_094215	-	-	-	-	no
+241103_094215.m4a	-	-	-	-	no

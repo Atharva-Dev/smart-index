@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- Primary shared storage (/storage/emulated/0): documents and other files (ADR-012). -->
+    <external-path name="shared" path="." />
+    <!-- Removable volumes (/storage/XXXX-XXXX) under All files access. FileProvider picks the most specific root,
+         so primary storage still uses "shared". -->
+    <root-path name="volumes" path="storage" />
+</paths>

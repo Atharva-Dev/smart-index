@@ -1,0 +1,25 @@
+{
+  "context": {
+    "build": {"brand": "samsung", "model": "SM-TEST", "device": "test", "fingerprint": "samsung/test/fp", "version": {"sdk": 36}},
+    "outputDir": "/tmp"
+  },
+  "benchmarks": [
+    {
+      "name": "search[ra_ALL_null]",
+      "className": "com.kuriousdragon.smartindex.benchmark.S1ShortQueryBenchmark",
+      "metrics": {
+        "SIDX:search:firstPageMs": {"minimum": 100, "maximum": 500, "median": 200, "runs": [100, 120, 130, 140, 150, 160, 170, 180, 190, 200, 210, 220, 230, 240, 250, 260, 270, 280, 290, 500]}
+      },
+      "sampledMetrics": {}
+    },
+    {
+      "name": "scrollBusyDay",
+      "className": "com.kuriousdragon.smartindex.benchmark.S4TimelineBenchmark",
+      "metrics": {},
+      "sampledMetrics": {
+        "frameDurationCpuMs": {"P50": 5.0, "P90": 9.0, "runs": [5.0, 6.0, 7.0]},
+        "SIDX:timeline:firstPageMs": {"P50": 300, "runs": [300]}
+      }
+    }
+  ]
+}

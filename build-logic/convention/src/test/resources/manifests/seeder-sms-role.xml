@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/rules">
+        <activity android:name="com.kuriousdragon.smartindex.tools.seeder.SeedActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.kuriousdragon.smartindex.tools.seeder.role.ComposeStubActivity" android:exported="true" />
+        <receiver android:name="com.kuriousdragon.smartindex.tools.seeder.role.SmsDeliverReceiver"
+            android:exported="true" android:permission="android.permission.BROADCAST_SMS" />
+        <receiver android:name="com.kuriousdragon.smartindex.tools.seeder.role.MmsWapPushDeliverReceiver"
+            android:exported="true" android:permission="android.permission.BROADCAST_WAP_PUSH" />
+        <service android:name="com.kuriousdragon.smartindex.tools.seeder.role.RespondViaMessageService"
+            android:exported="true" android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" />
+    </application>
+</manifest>

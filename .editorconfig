@@ -1,0 +1,30 @@
+# Formatting rules (ktlint via Spotless): `./gradlew spotlessApply` fixes, `./gradlew spotlessCheck` verifies.
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 4
+
+[*.{kt,kts}]
+ktlint_code_style = android_studio
+max_line_length = 120
+ij_kotlin_allow_trailing_comma = true
+ij_kotlin_allow_trailing_comma_on_call_site = true
+ij_kotlin_imports_layout = *
+# @Composable functions are PascalCase (Compose API guidelines).
+ktlint_function_naming_ignore_when_annotated_with = Composable
+# Signatures are wrapped by the author (multi-line data classes stay multi-line, like the LLD contract files).
+ktlint_standard_class-signature = disabled
+ktlint_standard_function-signature = disabled
+# Contract files are named after their owning LLD (Index.kt, Sync.kt, Config.kt, Log.kt), not their first declaration.
+ktlint_standard_filename = disabled
+
+[*.{yml,yaml,toml,json}]
+indent_size = 2
+
+[*.md]
+trim_trailing_whitespace = false

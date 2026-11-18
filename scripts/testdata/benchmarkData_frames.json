@@ -1,0 +1,10 @@
+{
+  "context": {"build": {"model": "SM-TEST", "brand": "samsung"}},
+  "benchmarks": [
+    {
+      "name": "scrollBusyDay",
+      "metrics": {"SIDX:timeline:firstPageMs": {"runs": [300.0]}},
+      "sampledMetrics": {"frameDurationCpuMs": {"runs": [[4.0, 5.0], [6.0], []]}}
+    }
+  ]
+}

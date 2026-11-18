@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- :feature:home copy. Ids follow Design Spec section 9; engineering-added ids are listed in Home and Search UI LLD 4.9. English only. -->
+<resources>
+    <!-- Search -->
+    <string name="search_hint">Search messages, files, calls…</string>
+    <string name="search_empty_title">Search everything on this phone</string>
+    <string name="search_empty_body">Type a word from a message, or part of a file name, folder, contact or number. Add a date to narrow it down.</string>
+    <string name="search_empty_examples">Examples: \"Rahul\", \"hotel\", \"invoice\"</string>
+
+    <!-- Dates -->
+    <string name="date_today">Today · %1$s</string>
+    <string name="date_yesterday">Yesterday · %1$s</string>
+    <string name="date_any">Any date</string>
+    <string name="date_last_7_days">Last 7 days</string>
+    <string name="date_last_30_days">Last 30 days</string>
+    <string name="date_sheet_title">Filter by date</string>
+    <string name="date_sheet_sub">Shows items dated within the range, inclusive, in this phone\'s time zone</string>
+    <string name="date_preset_today">Today</string>
+    <string name="date_preset_yesterday">Yesterday</string>
+    <string name="date_preset_last_7_days">Last 7 days</string>
+    <string name="date_preset_last_30_days">Last 30 days</string>
+    <string name="date_preset_pick_day">Pick a day…</string>
+    <string name="date_preset_custom_range">Custom range…</string>
+    <string name="date_picker_title">Go to date</string>
+    <string name="range_picker_title">Custom range</string>
+
+    <!-- Tabs -->
+    <string name="tab_all">All</string>
+    <string name="tab_photos">Photos</string>
+    <string name="tab_videos">Videos</string>
+    <string name="tab_documents">Documents</string>
+    <string name="tab_other_files">Other files</string>
+    <string name="tab_calls">Calls</string>
+    <string name="tab_recordings">Recordings</string>
+    <string name="tab_messages">Messages</string>
+
+    <!-- Parts of day -->
+    <string name="part_early_hours">Early hours</string>
+    <string name="part_morning">Morning</string>
+    <string name="part_afternoon">Afternoon</string>
+    <string name="part_evening">Evening</string>
+    <string name="part_night">Night</string>
+
+    <!-- Row meta -->
+    <string name="call_in">Incoming · %1$s</string>
+    <string name="call_out">Outgoing · %1$s</string>
+    <string name="call_in_nodur">Incoming</string>
+    <string name="call_out_nodur">Outgoing</string>
+    <string name="call_missed">Missed call</string>
+    <string name="call_rejected">Rejected call</string>
+    <string name="call_blocked">Blocked call</string>
+    <string name="msg_in">Received · SMS</string>
+    <string name="msg_out">Sent · SMS</string>
+    <string name="msg_in_mms">Received · MMS</string>
+    <string name="msg_out_mms">Sent · MMS</string>
+    <string name="msg_sms">SMS</string>
+    <string name="msg_mms">MMS</string>
+    <string name="msg_no_text">(No text)</string>
+    <string name="rec_meta">Call recording · %1$s</string>
+    <string name="rec_meta_nodur">Call recording</string>
+
+    <!-- Durations -->
+    <string name="duration_min_sec">%1$d min %2$d s</string>
+    <string name="duration_min">%1$d min</string>
+    <string name="duration_sec">%1$d s</string>
+
+    <!-- Sheets -->
+    <string name="sheet_open">Open</string>
+    <string name="sheet_open_sub">Opens in your default app for this file type</string>
+    <string name="sheet_open_with">Open with…</string>
+    <string name="sheet_open_with_sub">Choose which app opens it</string>
+    <string name="sheet_call_back">Call back</string>
+    <string name="sheet_open_contact">Open contact</string>
+    <string name="sheet_add_contact">Add to contacts</string>
+    <string name="sheet_add_contact_sub">Opens your Contacts app</string>
+    <string name="sheet_play_recording">Play recording</string>
+    <string name="sheet_play">Play</string>
+    <string name="sheet_pause">Pause</string>
+    <string name="sheet_selected">Selected</string>
+
+    <!-- Date pickers -->
+    <string name="picker_today">Today</string>
+    <string name="action_ok">OK</string>
+    <string name="action_clear">Clear</string>
+
+    <!-- Errors -->
+    <string name="err_no_app">No app on this phone can open .%1$s files.</string>
+    <string name="err_no_app_noext">No app on this phone can open this file.</string>
+    <string name="err_file_gone">This file was moved or deleted.</string>
+    <string name="err_play">Can\'t play this recording. The file may have been moved or deleted.</string>
+    <string name="err_message_open">No app on this phone can open this message.</string>
+    <string name="err_contact_open">No app on this phone can open this contact.</string>
+    <string name="err_call_open">No app on this phone can make this call.</string>
+    <string name="err_settings_open">Can\'t open Settings on this phone.</string>
+    <string name="player_err_sub">Can\'t play this recording</string>
+    <string name="action_dismiss">Dismiss</string>
+    <string name="action_retry">Try again</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_not_now">Not now</string>
+    <string name="action_allow_access">Allow access</string>
+    <string name="action_open_app_settings">Open app settings</string>
+    <string name="action_open_settings">Open settings</string>
+
+    <!-- Empty, no results and error states -->
+    <string name="empty_day_title">Nothing on this day</string>
+    <string name="empty_day_body">No photos, videos, files, calls or messages are dated %1$s.</string>
+    <string name="empty_day_action">Pick another date</string>
+    <string name="empty_tab_title">No %1$s on this day</string>
+    <string name="empty_tab_body">Nothing of this type is dated %1$s. Try another type or date.</string>
+    <string name="empty_tab_action">Show all types</string>
+    <string name="empty_range_title">Nothing in this date range</string>
+    <string name="empty_range_body">No photos, videos, files, calls or messages are dated %1$s.</string>
+    <string name="no_results_title">No results for \"%1$s\"</string>
+    <string name="no_results_body">Check the spelling or try fewer words.</string>
+    <string name="no_results_date_note">The date filter %1$s is on.</string>
+    <string name="no_results_action_clear_date">Clear date filter</string>
+    <string name="no_results_action_all_types">Search all types</string>
+    <string name="load_error_title_day">Couldn\'t load this day</string>
+    <string name="load_error_title_search">Couldn\'t search</string>
+    <string name="load_error_body">Something went wrong while reading the index. Your phone\'s data is not affected.</string>
+
+    <!-- Banners -->
+    <string name="banner_indexing_title">Indexing your phone… %1$s of %2$s items</string>
+    <string name="banner_indexing_title_unknown">Indexing your phone…</string>
+    <string name="banner_indexing_body">Results appear as they are found. You can keep using the app.</string>
+    <string name="banner_perm_title">%1$s are hidden</string>
+    <string name="banner_perm_body">Smart Index can\'t read %1$s yet. Allow access to include them.</string>
+    <string name="list_and">%1$s and %2$s</string>
+    <string name="perm_type_photos_videos">photos and videos</string>
+    <string name="perm_type_files">files and recordings</string>
+    <string name="perm_type_calls">calls</string>
+    <string name="perm_type_messages">messages</string>
+    <string name="perm_source_photos_videos">your photos</string>
+    <string name="perm_source_files">your files</string>
+    <string name="perm_source_calls">your call history</string>
+    <string name="perm_source_messages">your messages</string>
+
+    <!-- Tab permission state -->
+    <string name="tab_perm_title">Allow access to %1$s</string>
+    <string name="tab_perm_body">Smart Index needs %1$s to search your %2$s. %3$s are read on this phone only and never leave it.</string>
+    <string name="tab_perm_noun_photos_videos">photos and videos</string>
+    <string name="tab_perm_noun_files">files</string>
+    <string name="tab_perm_noun_recordings">call recordings</string>
+    <string name="tab_perm_noun_calls">calls</string>
+    <string name="tab_perm_noun_messages">messages</string>
+    <string name="tab_perm_permission_photos_videos">photo and video access</string>
+    <string name="tab_perm_permission_all_files">All files access</string>
+    <string name="tab_perm_permission_calls">the call history permission</string>
+    <string name="tab_perm_permission_messages">the SMS permission</string>
+    <string name="tab_perm_thing_photos_videos">photos and videos</string>
+    <string name="tab_perm_thing_documents">documents</string>
+    <string name="tab_perm_thing_files">files</string>
+    <string name="tab_perm_thing_recordings">call recordings</string>
+    <string name="tab_perm_thing_calls">calls</string>
+    <string name="tab_perm_thing_messages">messages</string>
+
+    <!-- Settings dialog -->
+    <string name="settings_dialog_title">Allow in Settings</string>
+    <string name="settings_dialog_body">%1$s access was turned off. To include %2$s, open Settings › Permissions › %3$s and choose Allow.</string>
+
+    <!-- Menu -->
+    <string name="menu_index_status">Index status</string>
+    <string name="menu_permissions">Permissions</string>
+
+    <!-- Accessibility (Design Spec section 8, LLD 4.10) -->
+    <string name="a11y_search_bar">Search messages, files, calls</string>
+    <string name="a11y_more_options">More options</string>
+    <string name="a11y_back">Back</string>
+    <string name="a11y_clear_search">Clear search</string>
+    <string name="a11y_prev_day">Previous day</string>
+    <string name="a11y_next_day">Next day</string>
+    <string name="a11y_unavailable">unavailable</string>
+    <string name="a11y_date_button">Showing %1$s. Change date</string>
+    <string name="a11y_tab_permission">%1$s, permission needed</string>
+    <plurals name="a11y_tab_count">
+        <item quantity="one">%1$s, %2$s item</item>
+        <item quantity="other">%1$s, %2$s items</item>
+    </plurals>
+    <string name="a11y_type_photo">Photo</string>
+    <string name="a11y_type_video">Video</string>
+    <string name="a11y_type_document">Document</string>
+    <string name="a11y_type_file">File</string>
+    <string name="a11y_call_incoming">Incoming call</string>
+    <string name="a11y_call_outgoing">Outgoing call</string>
+    <string name="a11y_call_missed">Missed call</string>
+    <string name="a11y_call_rejected">Rejected call</string>
+    <string name="a11y_call_blocked">Blocked call</string>
+    <string name="a11y_call_generic">Call</string>
+    <string name="a11y_has_recording">has recording</string>
+    <string name="a11y_row_recording">Call recording</string>
+    <string name="a11y_row_msg_received">Received message from %1$s, %2$s: %3$s</string>
+    <string name="a11y_row_msg_sent">Sent message to %1$s, %2$s: %3$s</string>
+    <string name="a11y_row_msg_generic">Message, %1$s, %2$s: %3$s</string>
+    <string name="a11y_msg_no_text">no text</string>
+    <string name="a11y_msg_open">Open in Messages</string>
+    <string name="a11y_show_actions">Show actions</string>
+    <string name="a11y_action_open_with">Open with</string>
+    <string name="a11y_action_more">More actions</string>
+    <string name="a11y_play_recording_of">Play recording of call with %1$s</string>
+    <string name="a11y_pause_recording">Pause recording</string>
+    <string name="a11y_catchup">Updating the index</string>
+    <string name="a11y_rewind_10">Rewind 10 seconds</string>
+    <string name="a11y_forward_10">Forward 10 seconds</string>
+
+    <!-- Player subtitle -->
+    <string name="player_sub_incoming">Incoming call · %1$s</string>
+    <string name="player_sub_outgoing">Outgoing call · %1$s</string>
+    <string name="player_sub_missed">Missed call · %1$s</string>
+    <string name="player_sub_rejected">Rejected call · %1$s</string>
+    <string name="player_sub_blocked">Blocked call · %1$s</string>
+    <string name="player_sub_call">Call · %1$s</string>
+    <string name="player_sub_recording">Call recording · %1$s</string>
+</resources>

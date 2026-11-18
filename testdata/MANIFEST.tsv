@@ -1,0 +1,26 @@
+path	bytes	sha256	expected_type	purpose
+bad/corrupt.pdf	2057	94f9e6e9b9d04fbb66b56606f6ec160c8eec861eb93fd68b94a3ef8971c6b30a	DOCUMENT	NFR-010 corrupt PDF, no xref/EOF
+bad/document-renamed.jpg	852	9543734536b360c63743cc297cc73c014ea4a373aad8b310b45fe679e79fcb95	PHOTO	NFR-010 wrong extension: PDF bytes named .jpg (thumbnail fails, type tile)
+bad/password-protected.docx	41984	feb4c8eaff6b5df7859252c919e1621fcd06fed74be41375beb176f0cd986739	DOCUMENT	NFR-010 agile-encrypted DOCX, password sidx
+bad/password-protected.pdf	1338	3e301d67754a1c491d7e3bbc5868932330abc2a9791d652832e9ac49bf4e3e76	DOCUMENT	NFR-010 AES-128 PDF, password sidx
+bad/photo-renamed.pdf	1795	08617c474e4b941290d08b9e53e6ad4de4bad4dc4d5df884b848d1a16d4a59ee	DOCUMENT	NFR-010 wrong extension: PNG bytes named .pdf (DOCUMENT by extension/MIME)
+bad/zero-byte.pdf	0	e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855	DOCUMENT	NFR-010 zero bytes
+docs/sample.doc	5632	7eccd4b23d378e17aed0c562b5acd76c39c216bcdc78b6012f9db07d6e93ef0c	DOCUMENT	FR-002 classification; Open with DOC
+docs/sample.docx	36418	37902ba4185dd80a8482d48d2470d27c00fb5f80e4512e27f1e7553e5bce2b97	DOCUMENT	FR-002 classification; Open with DOCX
+docs/sample.pdf	842	b83cb81591633ea8e5c7bcf38a71496b97882585424cc15aaeedb3027229b103	DOCUMENT	FR-002 classification; Open with PDF
+docs/sample.ppt	5632	3cfd47afcc5d680a85badd5afe64d8a098258fc9fe2725e0545e9bfa4eaf7333	DOCUMENT	FR-002 classification; Open with PPT
+docs/sample.pptx	28345	7f3bdc4121dd67a24507ebe5b663190f2010441f39a246667856133d7375a7cc	DOCUMENT	FR-002 classification; Open with PPTX
+docs/sample.txt	28	1128ea38eab2a3508792131c9da8228b866fad3beeb288fafa5bd31d040caaf7	DOCUMENT	FR-002 classification; Open with TXT
+docs/sample.xls	5632	fa0ed61c4c7682bca0d34abe547fb321bb2f749f2381c02e0878cb9add8683ff	DOCUMENT	FR-002 classification; Open with XLS
+docs/sample.xlsx	4875	3b220594595c7ebd03b3c05c249c5c03d56fd66842d7a0e2290f6aadea1274d4	DOCUMENT	FR-002 classification; Open with XLSX
+i18n/पावती.docx	36425	7337beceb0450d430f0db8e23f09a1a8a464649f750b6b5c994ec4441806b0f0	DOCUMENT	NFR-009 Devanagari name
+i18n/मराठी नोंदी.txt	62	92ba6777d5ecc3809395713b1b4f30d812f0ca3b5e0ccd7e73f5cb0bfd81f302	DOCUMENT	NFR-009 Devanagari name
+i18n/होटल बुकिंग.pdf	853	6e30dededbc19b56ca3fda182739e97416a0a214ccb090fe4b2dc9cfc24bc4db	DOCUMENT	NFR-009 Devanagari name
+other/noextension	37	6076da6dec53224bb2ec6fce857ee772a7188c3b29bb544ec9cd2b68ba8adbf6	OTHER_FILE	FR-003 other file (no extension)
+other/sample.apk	138	31b23d599e3233d851579bcd11fd4cee3b31fcd44ff177b34e58ea31abaee2db	OTHER_FILE	FR-003 other file (zip with empty AndroidManifest.xml, not installable)
+other/sample.csv	46	64cbc8cf50346d067f5d13c2d866d9e13c126ec69cbea14f8865c02a57160d97	DOCUMENT	FR-002 csv is in DOCUMENT_EXTS (media LLD 4.2), not OTHER_FILE
+other/sample.json	50	e37405ea3902f8028649b38f793174dc4c1e7a390587728d79187444f204e1b0	OTHER_FILE	FR-003 other file
+other/sample.xyz	28	56078bfd341a20656efd39b637bb46181202da465e384d15b3292da9b791c848	OTHER_FILE	FR-003 other file (unknown extension)
+other/sample.zip	148	66ce1cc5556645e39d9e51f472b94bc70532a0e40bf8114d77ad95139679131c	OTHER_FILE	FR-003 other file
+us002/Hotel booking.pdf	810	fa73c6f86b40b208ca8a394b8ee6037ff26b29515fbfbd31e38f57d0864c01f5	DOCUMENT	US-002 found by name match 'booking'; body is 'Itinerary' only
+us002/scan_0042.pdf	831	33f60b227c6f801f94082c9786de6ee422b6c6f696e520fc57b34e8a33659e71	DOCUMENT	US-002 negative / TC-SHELL-006: body has 'booking reference', name does not match

@@ -1,0 +1,48 @@
+# Gradle / build
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+/captures
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+
+# Local config (SDK path, signing secrets)
+local.properties
+keystore.properties
+*.jks
+*.keystore
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.fleet/
+.DS_Store
+
+# Kotlin / Java
+*.class
+.kotlin/
+hs_err_pid*.log
+
+# Android Studio / profiling
+*.hprof
+*.trace
+/benchmark/build/
+/baselineprofile/build/
+
+# Spike / scratch databases
+*.db
+*.db-wal
+*.db-shm
+
+# testdata fixture (zip with empty AndroidManifest.xml, not installable)
+!testdata/other/sample.apk
+
+# Python
+__pycache__/
+*.pyc

@@ -1,0 +1,468 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "b7949afe09f83f50b84b61d0f69da57f",
+    "entities": [
+      {
+        "tableName": "item",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `source` INTEGER NOT NULL, `source_id` INTEGER NOT NULL, `type` INTEGER NOT NULL, `title` TEXT NOT NULL, `folder` TEXT, `mime` TEXT, `ext` TEXT, `size_bytes` INTEGER, `duration_ms` INTEGER, `content_uri` TEXT, `primary_ts` INTEGER NOT NULL, `date_taken` INTEGER, `date_added` INTEGER, `date_modified` INTEGER, `date_event` INTEGER, `number_raw` TEXT, `number_norm` TEXT, `contact_name` TEXT, `direction` INTEGER, `msg_kind` INTEGER, `thread_id` INTEGER, `has_attachment` INTEGER NOT NULL, `body` TEXT, `source_version` INTEGER NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sourceId",
+            "columnName": "source_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "folder",
+            "columnName": "folder",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "mime",
+            "columnName": "mime",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "ext",
+            "columnName": "ext",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sizeBytes",
+            "columnName": "size_bytes",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "durationMs",
+            "columnName": "duration_ms",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "contentUri",
+            "columnName": "content_uri",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "primaryTs",
+            "columnName": "primary_ts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dateTaken",
+            "columnName": "date_taken",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "dateAdded",
+            "columnName": "date_added",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "dateModified",
+            "columnName": "date_modified",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "dateEvent",
+            "columnName": "date_event",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "numberRaw",
+            "columnName": "number_raw",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "numberNorm",
+            "columnName": "number_norm",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "contactName",
+            "columnName": "contact_name",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "direction",
+            "columnName": "direction",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "msgKind",
+            "columnName": "msg_kind",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "threadId",
+            "columnName": "thread_id",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "hasAttachment",
+            "columnName": "has_attachment",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "body",
+            "columnName": "body",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "sourceVersion",
+            "columnName": "source_version",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "idx_item_source",
+            "unique": true,
+            "columnNames": [
+              "source",
+              "source_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `idx_item_source` ON `${TABLE_NAME}` (`source`, `source_id`)"
+          },
+          {
+            "name": "idx_item_type_ts",
+            "unique": false,
+            "columnNames": [
+              "type",
+              "primary_ts"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `idx_item_type_ts` ON `${TABLE_NAME}` (`type`, `primary_ts`)"
+          },
+          {
+            "name": "idx_item_number_norm",
+            "unique": false,
+            "columnNames": [
+              "number_norm"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `idx_item_number_norm` ON `${TABLE_NAME}` (`number_norm`)"
+          }
+        ]
+      },
+      {
+        "tableName": "item_key",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `type` INTEGER NOT NULL, `ts` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ts",
+            "columnName": "ts",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "idx_item_key_ts",
+            "unique": false,
+            "columnNames": [
+              "ts",
+              "id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `idx_item_key_ts` ON `${TABLE_NAME}` (`ts`, `id`)"
+          },
+          {
+            "name": "idx_item_key_type_ts",
+            "unique": false,
+            "columnNames": [
+              "type",
+              "ts",
+              "id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `idx_item_key_type_ts` ON `${TABLE_NAME}` (`type`, `ts`, `id`)"
+          }
+        ]
+      },
+      {
+        "tableName": "item_date",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`item_id` INTEGER NOT NULL, `kind` INTEGER NOT NULL, `type` INTEGER NOT NULL, `ts` INTEGER NOT NULL, PRIMARY KEY(`item_id`, `kind`))",
+        "fields": [
+          {
+            "fieldPath": "itemId",
+            "columnName": "item_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "kind",
+            "columnName": "kind",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ts",
+            "columnName": "ts",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "item_id",
+            "kind"
+          ]
+        },
+        "indices": [
+          {
+            "name": "idx_item_date_ts",
+            "unique": false,
+            "columnNames": [
+              "ts",
+              "type",
+              "item_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `idx_item_date_ts` ON `${TABLE_NAME}` (`ts`, `type`, `item_id`)"
+          },
+          {
+            "name": "idx_item_date_type_ts",
+            "unique": false,
+            "columnNames": [
+              "type",
+              "ts",
+              "item_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `idx_item_date_type_ts` ON `${TABLE_NAME}` (`type`, `ts`, `item_id`)"
+          }
+        ]
+      },
+      {
+        "tableName": "short_text",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `ts` INTEGER NOT NULL, `type` INTEGER NOT NULL, `skey` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "ts",
+            "columnName": "ts",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "skey",
+            "columnName": "skey",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "idx_short_text_scan",
+            "unique": false,
+            "columnNames": [
+              "ts",
+              "id",
+              "type",
+              "skey"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `idx_short_text_scan` ON `${TABLE_NAME}` (`ts`, `id`, `type`, `skey`)"
+          }
+        ]
+      },
+      {
+        "tableName": "recording_link",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`call_item_id` INTEGER NOT NULL, `recording_item_id` INTEGER NOT NULL, `score` REAL NOT NULL, `method` TEXT NOT NULL, PRIMARY KEY(`call_item_id`))",
+        "fields": [
+          {
+            "fieldPath": "callItemId",
+            "columnName": "call_item_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "recordingItemId",
+            "columnName": "recording_item_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "score",
+            "columnName": "score",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "method",
+            "columnName": "method",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "call_item_id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "idx_recording_link_rec",
+            "unique": true,
+            "columnNames": [
+              "recording_item_id"
+            ],
+            "orders": [],
+            "createSql": "CREATE UNIQUE INDEX IF NOT EXISTS `idx_recording_link_rec` ON `${TABLE_NAME}` (`recording_item_id`)"
+          }
+        ]
+      },
+      {
+        "tableName": "contact_name",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`number_norm` TEXT NOT NULL, `name` TEXT NOT NULL, PRIMARY KEY(`number_norm`))",
+        "fields": [
+          {
+            "fieldPath": "numberNorm",
+            "columnName": "number_norm",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "number_norm"
+          ]
+        }
+      },
+      {
+        "tableName": "sync_state",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`source` INTEGER NOT NULL, `cursor` INTEGER NOT NULL, `store_version` TEXT, `last_full_reconcile` INTEGER, `last_run` INTEGER, `last_error` TEXT, PRIMARY KEY(`source`))",
+        "fields": [
+          {
+            "fieldPath": "source",
+            "columnName": "source",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cursor",
+            "columnName": "cursor",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "storeVersion",
+            "columnName": "store_version",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "lastFullReconcile",
+            "columnName": "last_full_reconcile",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "lastRun",
+            "columnName": "last_run",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "lastError",
+            "columnName": "last_error",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "source"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'b7949afe09f83f50b84b61d0f69da57f')"
+    ]
+  }
+}

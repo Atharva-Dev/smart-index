@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Design Spec §5.1 surface (light) and launcher primary. -->
+    <color name="window_background">#FBFAFE</color>
+    <color name="launcher_background">#2B55C4</color>
+</resources>

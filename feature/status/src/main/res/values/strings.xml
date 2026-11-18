@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="status_title">Index status</string>
+    <string name="status_sections_items">Indexed items</string>
+    <string name="status_sections_permissions">Permissions</string>
+
+    <string name="status_ok_title">Up to date</string>
+    <string name="status_ok_body_today">Last indexed today at %1$s. Checks for changes every 15 minutes and when you open the app.</string>
+    <string name="status_ok_body_yesterday">Last indexed yesterday at %1$s. Checks for changes every 15 minutes and when you open the app.</string>
+    <string name="status_ok_body_other">Last indexed on %1$s at %2$s. Checks for changes every 15 minutes and when you open the app.</string>
+    <string name="status_never_title">Not indexed yet</string>
+    <string name="status_never_body">Allow access below and Smart Index will start indexing.</string>
+    <string name="status_updating_title">Updating…</string>
+    <string name="status_updating_body">Checking for new and changed items.</string>
+    <string name="status_indexing_title">Indexing… %1$d%%</string>
+    <string name="status_indexing_body">%1$s of %2$s items. Search works meanwhile; results may be incomplete.</string>
+    <string name="status_indexing_title_unknown">Indexing…</string>
+    <string name="status_indexing_body_unknown">Search works meanwhile; results may be incomplete.</string>
+
+    <string name="status_err_storage_title">Indexing paused</string>
+    <string name="status_err_storage_body">Storage is almost full. Free up space to continue.</string>
+    <string name="status_err_source_title">Some items couldn\'t be indexed</string>
+    <string name="status_err_source_body">Couldn\'t read %1$s. Smart Index will try again soon.</string>
+    <string name="status_err_linking_title">Recordings aren\'t linked yet</string>
+    <string name="status_err_linking_body">Calls and recordings are indexed, but matching recordings to calls failed. Smart Index will try again soon.</string>
+    <string name="area_files">your photos, videos and files</string>
+    <string name="area_calls">your call history</string>
+    <string name="area_messages">your messages</string>
+    <string name="area_and">and</string>
+
+    <string name="status_doc_sub">PDF, Office and text files</string>
+    <string name="status_rec_sub">%1$s linked to calls</string>
+    <string name="status_noaccess">No access — not indexed</string>
+    <string name="status_count_unknown">Counting</string>
+    <string name="status_count_none">—</string>
+
+    <string name="status_allowed">Allowed</string>
+    <string name="status_allowed_partial">Allowed — selected photos and videos only</string>
+    <string name="status_allow">Allow</string>
+    <string name="status_allow_all">Allow all</string>
+
+    <string name="status_privacy">Your index is stored only in Smart Index\'s private storage on this phone. The app has no internet permission and the index is excluded from backups.</string>
+    <string name="status_reindex">Re-index everything</string>
+    <string name="status_reindex_helper">Available when indexing finishes.</string>
+    <string name="reindex_title">Re-index everything?</string>
+    <string name="reindex_body">Smart Index will rebuild its index from scratch. Search keeps working with current results while it runs. This can take a few minutes and uses more battery.</string>
+    <string name="reindex_confirm">Re-index</string>
+    <string name="reindex_cancel">Cancel</string>
+
+    <string name="type_photos">Photos</string>
+    <string name="type_videos">Videos</string>
+    <string name="type_documents">Documents</string>
+    <string name="type_other_files">Other files</string>
+    <string name="type_calls">Calls</string>
+    <string name="type_recordings">Recordings</string>
+    <string name="type_messages">Messages</string>
+
+    <string name="group_photos">Photos &amp; videos</string>
+    <string name="group_files">Files, documents &amp; call recordings</string>
+    <string name="group_messages">Messages</string>
+    <string name="group_calls">Call history</string>
+    <string name="group_contacts">Contacts</string>
+
+    <string name="a11y_back">Back</string>
+    <string name="a11y_banner">%1$s. %2$s</string>
+    <string name="a11y_type_with_count">%1$s, %2$s items</string>
+    <string name="a11y_type_with_sub">%1$s, %2$s items, %3$s</string>
+    <string name="a11y_type_no_access">%1$s, no access, not indexed</string>
+    <string name="a11y_type_counting">%1$s, counting</string>
+    <string name="a11y_group_allowed">%1$s, allowed</string>
+    <string name="a11y_group_not_allowed">%1$s, not allowed</string>
+    <string name="a11y_allow_group">Allow %1$s</string>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Mini-player copy: Design Spec §6.7, §8, §9 -->
+    <string name="mini_player_region">Recording player</string>
+    <string name="mini_player_play">Play</string>
+    <string name="mini_player_pause">Pause</string>
+    <string name="mini_player_retry">Retry</string>
+    <string name="mini_player_close">Stop and close player</string>
+    <string name="mini_player_error_sub">Can\'t play this recording</string>
+    <string name="mini_player_rewind_10">Rewind 10 seconds</string>
+    <string name="mini_player_forward_10">Forward 10 seconds</string>
+    <string name="mini_player_position">Playback position, %1$s of %2$s</string>
+    <string name="mini_player_time">%1$s / %2$s</string>
+</resources>

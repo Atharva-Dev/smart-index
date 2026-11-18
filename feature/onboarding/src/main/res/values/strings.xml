@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="welcome_title">Find anything on your phone</string>
+    <string name="welcome_body">Smart Index builds a private index of your phone so you can find things without knowing where they are.</string>
+    <string name="welcome_feature_1">Search your messages by their words, and find any photo, document, file or call by name or date</string>
+    <string name="welcome_feature_2">See everything that happened on any day in one timeline</string>
+    <string name="welcome_feature_3">Open results in the app of your choice</string>
+    <string name="welcome_privacy">Private by design: no internet permission, the index stays on this phone and is excluded from backups.</string>
+    <string name="welcome_cta">Get started</string>
+
+    <string name="step_label">Step %1$d of 5</string>
+    <string name="step_privacy">Stays on this phone. Smart Index has no internet access.</string>
+    <string name="step_reads_heading">What Smart Index reads</string>
+    <string name="step3_reads_heading">What Smart Index reads (never sends)</string>
+
+    <string name="step1_title">Photos &amp; videos</string>
+    <string name="step1_body">Lets you find photos and videos by date, name and folder, with thumbnails in the timeline.</string>
+    <string-array name="step1_reads">
+        <item>Photos and videos on this phone</item>
+        <item>Date taken, file name, folder, size, video length</item>
+    </string-array>
+
+    <string name="step2_title">Files, documents &amp; call recordings</string>
+    <string name="step2_body">Lets you find any document or file by its name, folder or date, and play call recordings. Android will open a settings page — turn on \"Allow access to manage all files\".</string>
+    <string-array name="step2_reads">
+        <item>Documents (PDF, Word, Excel, PowerPoint, text): name, folder, dates, size — not what\'s inside</item>
+        <item>Other files: name, folder, type, dates, size</item>
+        <item>Samsung call recordings</item>
+    </string-array>
+
+    <string name="step3_title">Messages</string>
+    <string name="step3_body">Lets you search every SMS and MMS, each as its own result — for example a payment message from a specific day.</string>
+    <string-array name="step3_reads">
+        <item>Sent and received SMS and MMS text</item>
+        <item>Sender or recipient and time</item>
+    </string-array>
+
+    <string name="step4_title">Call history</string>
+    <string name="step4_body">Lets you see calls in the timeline, search by name or number, call back, and play the matching recording.</string>
+    <string-array name="step4_reads">
+        <item>Number, direction (incoming, outgoing, missed), time and duration</item>
+    </string-array>
+
+    <string name="step5_title">Contacts</string>
+    <string name="step5_body">Shows names instead of numbers for calls and messages, so you can search \"Rahul\" instead of a number.</string>
+    <string-array name="step5_reads">
+        <item>Contact names and phone numbers</item>
+    </string-array>
+
+    <string name="step_cta">Allow access</string>
+    <string name="step2_cta">Continue to settings</string>
+    <string name="step_skip">Skip</string>
+
+    <string name="summary_title">You\'re ready</string>
+    <string name="summary_body">Smart Index will now index your phone in the background. You can keep using the app while it works.</string>
+    <string name="summary_status_allowed">Allowed</string>
+    <string name="summary_status_skipped">Skipped</string>
+    <string name="summary_status_partial">Allowed — selected photos and videos only</string>
+    <string name="summary_hint">Skipped something? Allow it later from ⋮ › Permissions.</string>
+    <string name="summary_cta">Start indexing</string>
+
+    <string name="group_photos">Photos &amp; videos</string>
+    <string name="group_files">Files, documents &amp; call recordings</string>
+    <string name="group_messages">Messages</string>
+    <string name="group_calls">Call history</string>
+    <string name="group_contacts">Contacts</string>
+
+    <string name="a11y_step_dots">Step %1$d of 5</string>
+</resources>

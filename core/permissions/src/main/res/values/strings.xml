@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="perm_settings_title">Allow in Settings</string>
+    <string name="perm_settings_body">%1$s access was turned off. To include %2$s, open Settings › Permissions › %3$s and choose Allow.</string>
+    <string name="perm_settings_cancel">Cancel</string>
+    <string name="perm_settings_open">Open settings</string>
+
+    <!-- Substitutions for perm_settings_body: sentence-start name, lower-case name, Settings permission label. -->
+    <string name="perm_photos_videos_title">Photos and videos</string>
+    <string name="perm_photos_videos_lower">photos and videos</string>
+    <string name="perm_photos_videos_setting">Photos and videos</string>
+    <string name="perm_messages_title">SMS</string>
+    <string name="perm_messages_lower">messages</string>
+    <string name="perm_messages_setting">SMS</string>
+    <string name="perm_call_log_title">Call history</string>
+    <string name="perm_call_log_lower">call history</string>
+    <string name="perm_call_log_setting">Call logs</string>
+    <string name="perm_contacts_title">Contacts</string>
+    <string name="perm_contacts_lower">contacts</string>
+    <string name="perm_contacts_setting">Contacts</string>
+</resources>

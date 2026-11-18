@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Lint policy (LLD — App shell §8). Every Security and Correctness issue is an error, so `./gradlew lint`
+  (and `check`) fails on them. Other categories keep their default severity. Suppress a single finding only
+  with tools:ignore / @Suppress plus a comment saying why; never disable an issue here without an LLD change.
+-->
+<lint>
+    <issue id="Security" severity="error" />
+    <issue id="Correctness" severity="error" />
+    <!-- Version-update hints are informational; versions move only through gradle/libs.versions.toml. -->
+    <issue id="GradleDependency" severity="ignore" />
+    <issue id="NewerVersionAvailable" severity="ignore" />
+    <issue id="AndroidGradlePluginVersion" severity="ignore" />
+</lint>

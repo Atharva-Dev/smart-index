@@ -1,0 +1,6 @@
+# testdata: treat generated files as binary; text-like sources stay diffable
+testdata/** binary -diff
+testdata/**/*.md text diff
+testdata/**/*.tsv text diff
+testdata/**/*.py text diff
+testdata/**/*.sh text diff
